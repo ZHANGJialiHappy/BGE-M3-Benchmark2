@@ -1,0 +1,63 @@
+test alarm in alarm pool
+                 mix(top 3+2)           top 5 Dense           top 3 Dense        top 5 sparse     top 2 sparse
+origin           54/55                  55/55                 54/55              53/55            52/55
+1st finetune     53/55                  53/55                 52/55              54/55            53/55
+
+
+test uuid in uuid pool
+                 mix(top 3+2)           top 5 Dense           top 3 Dense        top 5 sparse     top 2 sparse
+origin           93/108                 92/108                89/108             80/108           64/108
+1st finetune     104/108                102/108               101/108            91/108           74/108
+
+
+
+
+test alarm in total pool
+                 mix(top 3+2)           top 5 Dense           top 3 Dense        top 5 sparse     top 2 sparse
+origin           55/55                  55/55                 55/55              53/55            51/55
+1st finetune     52/55                  52/55                 52/55              49/55            46/55
+
+
+test uuid in total pool
+                 mix(top 3+2)           top 5 Dense           top 3 Dense        top 5 sparse     top 2 sparse
+origin           94/108                 92/108                90/108             81/108           65/108
+1st finetune     104/108                102/108               101/108            91/108           74/108
+                 
+
+
+Corrected statistical results (test in total pool)
+
+test uuid in total pool
+                 mix(top 3+2)           top 5 Dense           top 3 Dense        top 5 sparse     top 2 sparse
+1st finetune     104/108                102/108               102/108            98/108           94/108
+
+
+                 orign      1st finetun
+alarm            55/55      52/55
+uuid             102/108    104/108
+
+
+test data
+
+
+1. loss (hard neg, wrong_n)
+2. short cut learning(wrong_n?)    query: without alarm_id
+3. detect the problem in uuid
+
+4. Test datasets (increase alarm without alarm_id, (put right back), benchmark -> create new train dataset) uuid 108, alarm without alarm id 6, alarm with alarm id 50
+5. script for finetune command(adjust argument, run)
+6. wrong_n for dense (distribution, model detect wrong_n for distance and right answer)
+7. wrong_n for dot production -> dot production
+8. evaluation
+9. tool for manage results
+10. old finetune
+
+dataset
+1. test dataset change
+   original dataset
+   updated test dataset (delete, split, put, increase)
+2. train dataset
+
+benchmark
+base on original dataset(1. short cut. 2. statistics -> problem of original test dataset)
+methods(test on test dataset -> check incorrect answers -> mannual benchmark(multiple document_contents))
