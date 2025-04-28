@@ -34,8 +34,13 @@ test uuid in total pool
 
                  orign      1st finetun
 alarm            55/55      52/55
-uuid             102/108    104/108
+uuid             102/106    104/106
 
+
+For brevico
+
+                 orign     1st finetun
+brevico          68/99     11/99(incorrect)
 
 test data
 
