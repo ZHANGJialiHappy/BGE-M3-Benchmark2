@@ -129,6 +129,6 @@ def process_incorrect_questions(input_csv_path, output_csv_path):
                     "correct_top_uris": json.dumps(correct_uris)
                 })
 if __name__ == "__main__":
-    input_csv_path = "origin_mix_incorrect_questions.csv"
+    input_csv_path = "finetune_mix_incorrect_questions.csv"
     output_csv_path = "correct_questions_and_uris.csv"
     process_incorrect_questions(input_csv_path, output_csv_path)
