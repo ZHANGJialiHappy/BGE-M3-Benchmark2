@@ -115,6 +115,7 @@ for i, answer in enumerate(answers):
 
     # 检查答案和最近的 source_uri 是否有交集
 
+    # if all(item in top_mix_source_uris for item in answer):
     if bool(set(answer) & set(top_mix_source_uris)):
         mix_score += 1
     else:
