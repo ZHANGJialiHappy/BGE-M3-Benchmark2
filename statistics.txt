@@ -40,7 +40,7 @@ uuid             102/106    104/106
 For brevico
 
                  orign     1st finetun
-brevico          68/99     11/99(incorrect)
+brevico          84/102     76/102
 
 test data
 
