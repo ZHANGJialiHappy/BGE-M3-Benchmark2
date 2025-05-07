@@ -102,7 +102,7 @@ def check_if_answer_in_alarm(encoded_uri:str) -> str:
     """
     response = execute_query(query)
     return len(response) > 0
-
+# origin
 # def get_parent_chunk(encoded_uri:str) -> str:
 #     query = f"""
 #     SELECT document_contents
@@ -113,11 +113,22 @@ def check_if_answer_in_alarm(encoded_uri:str) -> str:
 #     response = execute_query(query, single_item=True)
 #     return response[0]
 
+# brevico
+# def get_parent_chunk(encoded_uri:str) -> str:
+#     query = f"""
+#     SELECT document_contents
+#     FROM v9__chatbot_documents
+#     WHERE source_uri like '%13cd045f-fa1e-4f83-b91b-e28244ae415a%{encoded_uri}%'
+#     LIMIT 1
+#     response = execute_query(query, single_item=True)
+#     return response[0]
+
+# Torm success
 def get_parent_chunk(encoded_uri:str) -> str:
     query = f"""
     SELECT document_contents
     FROM v9__chatbot_documents
-    WHERE source_uri like '%13cd045f-fa1e-4f83-b91b-e28244ae415a%{encoded_uri}%'
+    WHERE source_uri like '%58548175-ccef-4d6a-987c-f597b7d4d225%{encoded_uri}%'
     LIMIT 1
     """
     response = execute_query(query, single_item=True)
